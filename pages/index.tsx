@@ -32,7 +32,7 @@ const Home: NextPage = ({ projectsArray, iconsArray }: any) => {
         <Hero />
         <Perks />
         <Experience iconsArray={iconsArray} />
-        <Projects projectsArray={projectsArray} />
+        <Projects />
         <About />
         <CTA />
 
