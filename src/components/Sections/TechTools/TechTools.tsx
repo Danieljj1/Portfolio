@@ -9,8 +9,32 @@ import gsap from "gsap";
 const TechTools = ({ iconsArray }: any) => {
   const colorMode = useContext(ColorModeContext);
 
-  // ✅ guard must be INSIDE the component, before the main return
-  if (!iconsArray || !Array.isArray(iconsArray) || iconsArray.length === 0) {
+  const FrontendTools = Array.isArray(iconsArray)
+    ? iconsArray.filter((icon: any) => !icon.isBackend)
+    : [];
+  const OtherTools = Array.isArray(iconsArray)
+    ? iconsArray.filter((icon: any) => icon.isBackend)
+    : [];
+
+  const isfilterMode = (item: any) =>
+    colorMode?.mode === "light" ? false : item?.filter;
+
+  useEffect(() => {
+    // optional: only animate when you actually have tools
+    if (!Array.isArray(iconsArray) || iconsArray.length === 0) return;
+
+    MainTitleAnimation(".title1", ".title2");
+    gsap.to(".secondTitle", {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: ".secondTitle",
+        start: "top 70%",
+      },
+    });
+  }, [iconsArray]);
+
+  if (!Array.isArray(iconsArray) || iconsArray.length === 0) {
     return (
       <>
         <Container maxWidth="lg" sx={{ margin: "0 auto", py: { xs: "6em" } }}>
@@ -43,24 +67,6 @@ const TechTools = ({ iconsArray }: any) => {
       </>
     );
   }
-
-  const FrontendTools = iconsArray.filter((icon: any) => !icon.isBackend);
-  const OtherTools = iconsArray.filter((icon: any) => icon.isBackend);
-
-  const isfilterMode = (item: any) =>
-    colorMode?.mode === "light" ? false : item?.filter;
-
-  useEffect(() => {
-    MainTitleAnimation(".title1", ".title2");
-    gsap.to(".secondTitle", {
-      opacity: 1,
-      y: 0,
-      scrollTrigger: {
-        trigger: ".secondTitle",
-        start: "top 70%",
-      },
-    });
-  }, []);
 
   return (
     <>
