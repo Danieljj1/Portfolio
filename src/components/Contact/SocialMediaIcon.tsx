@@ -28,15 +28,15 @@ const SocialMediaIcon = ({ title, svg, href, filter }: ISocialMedia) => {
             height: {
               xs: "35px",
             },
+            position: "relative",
           }}
         >
           <Image
             alt="Icon"
             className={`${filter ? "filter " : ""} icon`}
-            fill
-            sizes="35px"
-            style={{ objectFit: "contain" }}
             src={svg || ""}
+            fill
+            style={{ objectFit: "contain" }}
           />
         </Box>
         <Typography
