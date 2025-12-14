@@ -64,9 +64,11 @@ const About = () => {
               ></Box>
               <Image
                 alt="Personal Image"
-                className="img1 "
-                layout="fill"
-                src={`/images/IMG_5233.jpg`}
+                className="img1"
+                src="/images/IMG_5233.jpg"
+                fill
+                sizes="(max-width: 900px) 100vw, 400px"
+                style={{ objectFit: "cover" }}
               />
             </Box>
           </Grid>
