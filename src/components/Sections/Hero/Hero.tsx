@@ -109,7 +109,7 @@ const Hero = () => {
                 View Projects
               </Button>
               <a
-                href={`https://drive.google.com/drive/u/0/my-drive`}
+                href={`public\Daniel_Harris-Jordan_Resume_Final.pdf`}
                 rel="noreferrer"
                 target="_blank"
               >
