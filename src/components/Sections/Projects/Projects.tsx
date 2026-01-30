@@ -19,7 +19,7 @@ const projectsArray: IProjectCard[] = [
     title: "Ledger",
     description:
       "A Financial Budgeting App that helps users track expenses and income efficiently",
-    img: "/images/Screenshot 2026-01-30 003255.png",
+    img: "/images/Ledger.png",
     siteUrl: "https://ledger-frontend-f452.onrender.com",
     repoUrl: "https://github.com/Danieljj1/Ledger",
   },
