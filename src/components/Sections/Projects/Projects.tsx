@@ -16,6 +16,14 @@ import { IProjectCard, IProjects } from "../../../Types/Types";
 
 const projectsArray: IProjectCard[] = [
   {
+    title: "Ledger",
+    description:
+      "A Financial Budgeting App that helps users track expenses and income efficiently",
+    img: "/images/Screenshot 2026-01-30 003255.png",
+    siteUrl: "https://ledger-frontend-f452.onrender.com/login",
+    repoUrl: "https://github.com/Danieljj1/Ledger",
+  },
+  {
     title: "Spani-GO",
     description:
       "A Spanish-learning web app with AI-powered feedback, built with React and FastAPI.",
